@@ -3,6 +3,7 @@ const express=require("express")
 const mongoose=require("mongoose")
 
 const resumeRouter=require("./Controllers/resumeRouter")
+const entryRouter=require("./Controllers/entryRouter")
 
 const app=express()
 
@@ -14,6 +15,7 @@ mongoose.connect("mongodb+srv://Swathi:Swathi123@cluster0.om2gp.mongodb.net/Resu
 )
 
 app.use("/api/resume",resumeRouter)
+app.use("/api/entry",entryRouter)
 
 app.listen(3003,()=>{
     console.log("Server running")
